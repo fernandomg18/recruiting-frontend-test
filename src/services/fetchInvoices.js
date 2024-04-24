@@ -16,11 +16,11 @@ const fetchPendingInvoices = async () => {
             let amountInUSD, amountInCLP;
     
             if (invoice.currency === 'USD') {
-            amountInUSD = invoice.amount;
-            amountInCLP = invoice.amount * 800;
+                amountInUSD = invoice.amount;
+                amountInCLP = invoice.amount * 800;
             } else if (invoice.currency === 'CLP') {
-            amountInUSD = invoice.amount / 800;
-            amountInCLP = invoice.amount;
+                amountInUSD = invoice.amount / 800;
+                amountInCLP = invoice.amount;
             }
     
             return { ...invoice, amountInUSD, amountInCLP };
